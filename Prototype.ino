@@ -84,19 +84,19 @@ void loop() {
   digitalWrite(S3, LOW);
   //Reading the output frequency
   frequency = pulseIn(sensorOut, LOW);
-  //flipping from pulse width duration to frequency
+  //Flipping from pulse width duration to frequency
   redValue = map(frequency, redMin, redMax, 255, 0);
   redValue = constrain(redValue, 0, 255);
   // Printing the value on the serial monitor
   Serial.print("R= "); // Printing name
-  Serial.print(redValue); // printing RED colour frequency
+  Serial.print(redValue); // printing Red colour frequency
   Serial.print("  ");
 
   digitalWrite(S2, HIGH);
   digitalWrite(S3, HIGH);
   //Reading the output frequency
   frequency = pulseIn(sensorOut, LOW);
-  //flipping from pulse width duration to frequency
+  //Flipping from pulse width duration to frequency
   greenValue = map(frequency, greenMin, greenMax, 255, 0);
   greenValue = constrain(greenValue, 0, 255);
   // Printing the value on the serial monitor
@@ -108,7 +108,7 @@ void loop() {
   digitalWrite(S3, HIGH);
   //Reading the output frequency
   frequency = pulseIn(sensorOut, LOW);
-  //flipping from pulse width duration to frequency
+  //Flipping from pulse width duration to frequency
   blueValue = map(frequency, blueMin, blueMax, 255, 0);
   blueValue = constrain(blueValue, 0, 255);
   // Printing the value on the serial monitor
